@@ -1,0 +1,684 @@
+{
+    "name" : "Shipments",
+
+    "unique_identifier" : "spot-cargo-shipment-addon",
+
+    "version" : "0.20",
+
+    "minimum_item_version" : "3.7",
+
+    "addon_banner" : "shipment_banner.jpg",
+
+    "directory" :
+    [
+        {
+          "name" : [
+                "resources/views/hooks/spot-cargo-shipment-addon",
+                "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-client-addon",
+                "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-addon",
+                "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-mission-addon",
+                "resources/views/backend/shipments",
+
+                "resources/views/backend/branchs",
+
+                "resources/views/backend/captains",
+
+                "resources/views/backend/clients",
+
+                "resources/views/backend/missions",
+
+
+                "resources/views/hooks/transaction_addon",
+                "resources/views/hooks/transaction_addon/spot-cargo-shipment-client-addon",
+                "resources/views/hooks/transaction_addon/spot-cargo-shipment-captain-addon",
+                "resources/views/backend/transactions"
+            ]
+        } 
+    ],
+
+    "sql_file"  : "",
+
+    "files"     :
+    [
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/AddonEvenListeners/spot-cargo-shipment-addon.json",
+            "update_directory": "app/AddonEvenListeners/spot-cargo-shipment-addon.json"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/assets/shipment_banner.jpg",
+            "update_directory": "public/shipment_banner.jpg"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/assets/cut-line.gif",
+            "update_directory": "public/assets/img/cut-line.gif"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/assets/cut-hr-line.gif",
+            "update_directory": "public/assets/img/cut-hr-line.gif"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-client-addon/create.blade.php",
+            "update_directory": "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-client-addon/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-client-addon/edit.blade.php",
+            "update_directory": "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-client-addon/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-mission-addon/show.blade.php",
+            "update_directory": "resources/views/hooks/spot-cargo-shipment-addon/spot-cargo-shipment-mission-addon/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/create_by_api.blade.php",
+            "update_directory": "resources/views/backend/shipments/create_by_api.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/create.blade.php",
+            "update_directory": "resources/views/backend/shipments/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/shipment_calc.blade.php",
+            "update_directory": "resources/views/backend/shipments/shipment_calc.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/edit.blade.php",
+            "update_directory": "resources/views/backend/shipments/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/show.blade.php",
+            "update_directory": "resources/views/backend/shipments/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/track.blade.php",
+            "update_directory": "resources/views/backend/shipments/track.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/tracking.blade.php",
+            "update_directory": "resources/views/backend/shipments/tracking.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index.blade.php",
+            "update_directory": "resources/views/backend/shipments/index.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/pay.blade.php",
+            "update_directory": "resources/views/backend/shipments/pay.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/thanks-pay.blade.php",
+            "update_directory": "resources/views/backend/shipments/thanks-pay.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index-package.blade.php",
+            "update_directory": "resources/views/backend/shipments/index-package.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/edit-package.blade.php",
+            "update_directory": "resources/views/backend/shipments/edit-package.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/create-package.blade.php",
+            "update_directory": "resources/views/backend/shipments/create-package.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/create-area.blade.php",
+            "update_directory": "resources/views/backend/shipments/create-area.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/edit-area.blade.php",
+            "update_directory": "resources/views/backend/shipments/edit-area.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/edit-cost.blade.php",
+            "update_directory": "resources/views/backend/shipments/edit-cost.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/fees-by-gram-price-settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/fees-by-gram-price-settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/fees-country-to-country-settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/fees-country-to-country-settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/fees-fixed-settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/fees-fixed-settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/print-stickers.blade.php",
+            "update_directory": "resources/views/backend/shipments/print-stickers.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/fees-state-to-state-settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/fees-state-to-state-settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/fees-type-settings.blade.php",
+            "update_directory": "resources/views/backend/shipments/fees-type-settings.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index-areas.blade.php",
+            "update_directory": "resources/views/backend/shipments/index-areas.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index-costs.blade.php",
+            "update_directory": "resources/views/backend/shipments/index-costs.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/shipments-report.blade.php",
+            "update_directory": "resources/views/backend/shipments/shipments-report.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index-costs.blade.php",
+            "update_directory": "resources/views/backend/shipments/index-costs.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/print.blade.php",
+            "update_directory": "resources/views/backend/shipments/print.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/print_label.blade.php",
+            "update_directory": "resources/views/backend/shipments/print_label.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/costs-repeter.blade.php",
+            "update_directory": "resources/views/backend/shipments/costs-repeter.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/covered_cities.blade.php",
+            "update_directory": "resources/views/backend/shipments/covered_cities.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/covered_countries.blade.php",
+            "update_directory": "resources/views/backend/shipments/covered_countries.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/import.blade.php",
+            "update_directory": "resources/views/backend/shipments/import.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/shipment_sidenav.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/shipment_sidenav.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/topbar/shipment_sidenav.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/topbar/shipment_sidenav.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/permissions/shipment_permissions.blade.php",
+            "update_directory": "resources/views/backend/permissions/shipment_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/notifications/shipments.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/notifications/shipments.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/login/register.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/login/register.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/dashboard/2-latest_lists.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/dashboard/2-latest_lists.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/inc/dashboard/1-order_count.blade.php",
+            "update_directory": "resources/views/backend/inc/addons/dashboard/1-order_count.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/shipments.php",
+            "update_directory": "routes/addons/shipments.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/api/shipments.php",
+            "update_directory": "routes/addons/api/shipments.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/ShipmentController.php",
+            "update_directory": "app/Http/Controllers/ShipmentController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/exports/ShipmentsExport.php",
+            "update_directory": "app/Services/ShipmentsExport.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/PackagesController.php",
+            "update_directory": "app/Http/Controllers/PackagesController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/CostController.php",
+            "update_directory": "app/Http/Controllers/CostController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/AreaController.php",
+            "update_directory": "app/Http/Controllers/AreaController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendAddShipmenttNotification.php",
+            "update_directory": "app/Listeners/SendAddShipmenttNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendApproveMissionNotification.php",
+            "update_directory": "app/Listeners/SendApproveMissionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendAssignMissionNotification.php",
+            "update_directory": "app/Listeners/SendAssignMissionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendCaptainNotification.php",
+            "update_directory": "app/Listeners/SendCaptainNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendClientNotification.php",
+            "update_directory": "app/Listeners/SendClientNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendCreateMissionNotification.php",
+            "update_directory": "app/Listeners/SendCreateMissionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendMissionActionNotification.php",
+            "update_directory": "app/Listeners/SendMissionActionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendShipmentActionNotification.php",
+            "update_directory": "app/Listeners/SendShipmentActionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendUpdateMissionNotification.php",
+            "update_directory": "app/Listeners/SendUpdateMissionNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/listeners/SendUpdateShipmentNotification.php",
+            "update_directory": "app/Listeners/SendUpdateShipmentNotification.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/AddCaptain.php",
+            "update_directory": "app/Events/AddCaptain.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/AddClient.php",
+            "update_directory": "app/Events/AddClient.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/AddShipment.php",
+            "update_directory": "app/Events/AddShipment.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/ApproveMission.php",
+            "update_directory": "app/Events/ApproveMission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/AssignMission.php",
+            "update_directory": "app/Events/AssignMission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/CreateMission.php",
+            "update_directory": "app/Events/CreateMission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/MissionAction.php",
+            "update_directory": "app/Events/MissionAction.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/ShipmentAction.php",
+            "update_directory": "app/Events/ShipmentAction.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/UpdateMission.php",
+            "update_directory": "app/Events/UpdateMission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/events/UpdateShipment.php",
+            "update_directory": "app/Events/UpdateShipment.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/AddressClient.php",
+            "update_directory": "app/AddressClient.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Shipment.php",
+            "update_directory": "app/Shipment.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Area.php",
+            "update_directory": "app/Area.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Cost.php",
+            "update_directory": "app/Cost.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Country.php",
+            "update_directory": "app/Country.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/State.php",
+            "update_directory": "app/State.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Package.php",
+            "update_directory": "app/Package.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/PackageShipment.php",
+            "update_directory": "app/PackageShipment.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/ShipmentLog.php",
+            "update_directory": "app/ShipmentLog.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/ShipmentMission.php",
+            "update_directory": "app/ShipmentMission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/ShipmentSetting.php",
+            "update_directory": "app/ShipmentSetting.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/ClientShipmentLog.php",
+            "update_directory": "app/ClientShipmentLog.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/MissionReason.php",
+            "update_directory": "app/MissionReason.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Reason.php",
+            "update_directory": "app/Reason.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/ShipmentReason.php",
+            "update_directory": "app/ShipmentReason.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/ShipmentActionHelper.php",
+            "update_directory": "app/Http/Helpers/ShipmentActionHelper.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/StatusManagerHelper.php",
+            "update_directory": "app/Http/Helpers/StatusManagerHelper.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/ShipmentPRNG.php",
+            "update_directory": "app/Http/Helpers/ShipmentPRNG.php"
+        },
+
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/BranchController.php",
+            "update_directory": "app/Http/Controllers/BranchController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/branchs.php",
+            "update_directory": "routes/addons/branchs.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/branch/backend/create.blade.php",
+            "update_directory": "resources/views/backend/branchs/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/branch/backend/edit.blade.php",
+            "update_directory": "resources/views/backend/branchs/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/branch/backend/show.blade.php",
+            "update_directory": "resources/views/backend/branchs/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/branch/backend/index.blade.php",
+            "update_directory": "resources/views/backend/branchs/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/spot-cargo-shipment-addon/views/branch/permissions/branch_permissions.blade.php",
+            "update_directory"  : "resources/views/backend/permissions/branch_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Branch.php",
+            "update_directory": "app/Branch.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/UserBranch.php",
+            "update_directory": "app/UserBranch.php"
+        },
+
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/CaptainController.php",
+            "update_directory": "app/Http/Controllers/CaptainController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/captains.php",
+            "update_directory": "routes/addons/captains.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/captain/backend/create.blade.php",
+            "update_directory": "resources/views/backend/captains/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/captain/backend/edit.blade.php",
+            "update_directory": "resources/views/backend/captains/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/captain/backend/show.blade.php",
+            "update_directory": "resources/views/backend/captains/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/captain/backend/index.blade.php",
+            "update_directory": "resources/views/backend/captains/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/spot-cargo-shipment-addon/views/captain/permissions/captain_permissions.blade.php",
+            "update_directory"  : "resources/views/backend/permissions/captain_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Captain.php",
+            "update_directory": "app/Captain.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/UserCaptain.php",
+            "update_directory": "app/UserCaptain.php"
+        },
+
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/ClientController.php",
+            "update_directory": "app/Http/Controllers/ClientController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/clients.php",
+            "update_directory": "routes/addons/clients.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/client/register.blade.php",
+            "update_directory": "resources/views/backend/clients/register.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/client/backend/create.blade.php",
+            "update_directory": "resources/views/backend/clients/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/client/backend/edit.blade.php",
+            "update_directory": "resources/views/backend/clients/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/client/backend/show.blade.php",
+            "update_directory": "resources/views/backend/clients/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/client/backend/index.blade.php",
+            "update_directory": "resources/views/backend/clients/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/spot-cargo-shipment-addon/views/client/permissions/client_permissions.blade.php",
+            "update_directory"  : "resources/views/backend/permissions/client_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Client.php",
+            "update_directory": "app/Client.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/UserClient.php",
+            "update_directory": "app/UserClient.php"
+        },
+
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/backend/show.blade.php",
+            "update_directory": "resources/views/backend/missions/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/backend/index.blade.php",
+            "update_directory": "resources/views/backend/missions/index.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/backend/ajaxed-confirm-amount.blade.php",
+            "update_directory": "resources/views/backend/missions/ajaxed-confirm-amount.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/backend/manifest-profile.blade.php",
+            "update_directory": "resources/views/backend/missions/manifest-profile.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/backend/manifests.blade.php",
+            "update_directory": "resources/views/backend/missions/manifests.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/mission/permissions/mission_permissions.blade.php",
+            "update_directory": "resources/views/backend/permissions/mission_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/missions.php",
+            "update_directory": "routes/addons/missions.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/MissionsController.php",
+            "update_directory": "app/Http/Controllers/MissionsController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Mission.php",
+            "update_directory": "app/Mission.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/MissionActionHelper.php",
+            "update_directory": "app/Http/Helpers/MissionActionHelper.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/MissionStatusManagerHelper.php",
+            "update_directory": "app/Http/Helpers/MissionStatusManagerHelper.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/MissionPRNG.php",
+            "update_directory": "app/Http/Helpers/MissionPRNG.php"
+        },
+
+
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/TransactionController.php",
+            "update_directory": "app/Http/Controllers/TransactionController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/Transaction.php",
+            "update_directory": "app/Transaction.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/routes/transactions.php",
+            "update_directory": "routes/addons/transactions.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/add.blade.php",
+            "update_directory": "resources/views/backend/transactions/add.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/edit.blade.php",
+            "update_directory": "resources/views/backend/transactions/edit.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/show.blade.php",
+            "update_directory": "resources/views/backend/transactions/show.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/index.blade.php",
+            "update_directory": "resources/views/backend/transactions/index.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/create.blade.php",
+            "update_directory": "resources/views/backend/transactions/create.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/permissions/transaction_addon_permissions.blade.php",
+            "update_directory": "resources/views/backend/permissions/transaction_addon_permissions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/hooks/transaction_addon/spot-cargo-shipment-client-addon/show_sidenav.blade.php",
+            "update_directory": "resources/views/hooks/transaction_addon/spot-cargo-shipment-client-addon/show_sidenav.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/hooks/transaction_addon/spot-cargo-shipment-captain-addon/show_sidenav.blade.php",
+            "update_directory": "resources/views/hooks/transaction_addon/spot-cargo-shipment-captain-addon/show_sidenav.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/TransactionHelper.php",
+            "update_directory": "app/Http/Helpers/TransactionHelper.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/show-captain-transactions.blade.php",
+            "update_directory": "resources/views/backend/transactions/show-captain-transactions.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/transactions/backend/show-client-transactions.blade.php",
+            "update_directory": "resources/views/backend/transactions/show-client-transactions.blade.php"
+        },
+
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/Api/MissionController.php",
+            "update_directory": "app/Http/Controllers/Api/MissionController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/Api/ShipmentController.php",
+            "update_directory": "app/Http/Controllers/Api/ShipmentController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/helpers/ApiHelper.php",
+            "update_directory": "app/Http/Helpers/ApiHelper.php"
+        },  
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/ValidationController.php",
+            "update_directory": "app/Http/Controllers/ValidationController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/Api/BranchController.php",
+            "update_directory": "app/Http/Controllers/Api/BranchController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/controllers/DeliveryTimesController.php",
+            "update_directory": "app/Http/Controllers/DeliveryTimesController.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/index-deliveryTimes.blade.php",
+            "update_directory": "resources/views/backend/shipments/index-deliveryTimes.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/edit-deliveryTimes.blade.php",
+            "update_directory": "resources/views/backend/shipments/edit-deliveryTimes.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/create-deliveryTimes.blade.php",
+            "update_directory": "resources/views/backend/shipments/create-deliveryTimes.blade.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/DeliveryTime.php",
+            "update_directory": "app/DeliveryTime.php"
+        },
+        {
+            "root_directory": "addons/spot-cargo-shipment-addon/views/shipment/backend/barcode_scanner.blade.php",
+            "update_directory": "resources/views/backend/shipments/barcode_scanner.blade.php"
+        }
+    ]
+}

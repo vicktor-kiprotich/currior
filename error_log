@@ -1,0 +1,30 @@
+[31-Jan-2022 22:20:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'root', '1', Array)
+#1 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', '1', Array)
+#2 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\Database\Connectors\MySqlConnector- in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 669
+[24-Dec-2023 16:54:56 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'expressl_courier'@'localhost' to database 'expressl_courier' in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#1 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#2 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connecto in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 669
+[24-Dec-2023 16:54:58 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'expressl_courier'@'localhost' to database 'expressl_courier' in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#1 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#2 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connecto in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 669
+[24-Dec-2023 16:55:08 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'expressl_courier'@'localhost' to database 'expressl_courier' in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#1 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#2 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connecto in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 669
+[24-Dec-2023 16:55:18 Africa/Nairobi] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'expressl_courier'@'localhost' to database 'expressl_courier' in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#1 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'expressl_courie...', 'courier.admin..', Array)
+#2 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connecto in /home/expressl/public_html/courier/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 669
