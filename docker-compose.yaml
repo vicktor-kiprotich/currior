@@ -1,0 +1,57 @@
+version: '3.7'
+services:
+
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+    working_dir: /app
+    networks:
+      - app-network
+
+  # #Nginx Service
+  # webserver:
+  #   image: nginx:alpine
+  #   container_name: webserver
+  #   restart: unless-stopped
+  #   tty: true
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./:/app
+  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/
+  #     - ./nginx-logs:/var/log/nginx
+  #   networks:
+  #     - app-network
+
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    platform: linux/x86_64
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    volumes:
+      - data:/var/lib/mysql/
+
+volumes:
+  data:
+    driver: local
+  
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
